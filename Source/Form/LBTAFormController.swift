@@ -65,7 +65,9 @@ open class LBTAFormController: UIViewController {
         _ = distanceToBottom
     }
     
-    lazy fileprivate var distanceToBottom = self.distanceFromLowestElementToBottom()
+    fileprivate var distanceToBottom: CGFloat {
+        self.distanceFromLowestElementToBottom()
+    }
     
     fileprivate func distanceFromLowestElementToBottom() -> CGFloat {
         if lowestElement != nil {
